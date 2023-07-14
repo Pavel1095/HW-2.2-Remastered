@@ -5,6 +5,7 @@ public class Puffinduy extends Hogwarts {
     private int honesty;
 
     public Puffinduy(String fullName, int magic, int teleport,int industriousness, int loyalty, int honesty) {
+        super(fullName, magic, teleport);
         if (industriousness < 0 || industriousness > 100){
             throw new RuntimeException("Неверное значение industriousness");
         }
@@ -14,9 +15,6 @@ public class Puffinduy extends Hogwarts {
         if (honesty < 0 || honesty > 100){
             throw new RuntimeException("Неверное значение honesty");
         }
-        this.magic = magic;
-        this.teleport = teleport;
-        this.fullName = fullName;
         this.industriousness = industriousness;
         this.loyalty = loyalty;
         this.honesty = honesty;
@@ -35,12 +33,9 @@ public class Puffinduy extends Hogwarts {
     }
     @Override
     public String toString() {
-        return "Я - " + fullName +
-                "\nfullName = " + fullName +
+        return super.toString() +
                 "\nindustriousness = " + industriousness +
                 "\nloyalty = " + loyalty +
-                "\nhonesty = " + honesty +
-                "\nmagic = " + magic +
-                "\nteleport = " + teleport;
+                "\nhonesty = " + honesty;
     }
 }

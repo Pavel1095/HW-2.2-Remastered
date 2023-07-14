@@ -1,7 +1,7 @@
 public abstract class Hogwarts {
-    String fullName;
-    int magic;
-    int teleport;
+    private String fullName;
+    private int magic;
+    private int teleport;
 
     public Hogwarts(String fullName, int magic, int teleport) {
 

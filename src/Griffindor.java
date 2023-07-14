@@ -3,16 +3,6 @@ public class Griffindor extends Hogwarts {
     private int nobility;
     private int bravery;
 
-    public int getHonor() {
-        return honor;
-    }
-    public int getNobility() {
-        return nobility;
-    }
-    public int getBravery() {
-        return bravery;
-    }
-
     public Griffindor(String fullName, int magic, int teleport, int honor, int nobility, int bravery) {
         super(fullName, magic, teleport);
 
@@ -25,12 +15,19 @@ public class Griffindor extends Hogwarts {
         if (bravery < 0 || bravery > 100){
             throw new RuntimeException("Неверное значение bravery");
         }
-        this.magic = magic;
-        this.teleport = teleport;
-        this.fullName = fullName;
         this.honor = honor;
         this.nobility = nobility;
         this.bravery = bravery;
+    }
+    public int getHonor() {
+        return honor;
+    }
+    public int getNobility() {
+        return nobility;
+    }
+
+    public int getBravery() {
+        return bravery;
     }
 
     public void compareStudents (Griffindor studentSecond) {
@@ -47,12 +44,10 @@ public class Griffindor extends Hogwarts {
 
     @Override
     public String toString() {
-        return "Я " + fullName +
-                "\nfaculty = " + "Griffindor" +
+        return super.toString() +
+        "\nfaculty = " + "Griffindor" +
                 "\nhonor = " + honor +
                 "\nnobility = " + nobility +
-                "\nbravery = " + bravery +
-                "\nmagic = " + magic +
-                "\ntelleport = " + teleport;
+                "\nbravery = " + bravery;
     }
 }

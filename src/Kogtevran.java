@@ -45,6 +45,7 @@ public class Kogtevran extends Hogwarts {
     }
 
     public Kogtevran(String fullName, int magic, int teleport,int mind, int wisdom, int wit, int creation) {
+        super(fullName, magic, teleport);
         if (mind < 0 || mind > 100){
             throw new RuntimeException("Неверное значение mind");
         }
@@ -57,9 +58,6 @@ public class Kogtevran extends Hogwarts {
         if (creation < 0 || creation > 100){
             throw new RuntimeException("Неверное значение creation");
         }
-        this.magic = magic;
-        this.teleport = teleport;
-        this.fullName = fullName;
         this.mind = mind;
         this.wisdom = wisdom;
         this.wit = wit;
@@ -68,13 +66,11 @@ public class Kogtevran extends Hogwarts {
 
     @Override
     public String toString() {
-        return "Я - " + fullName +
+        return super.toString() +
                 "\nfaculty - " + "Kogtevran" +
                 "\nmind = " + mind +
                 "\nwisdom = " + wisdom +
                 "\nwit = " + wit +
-                "\ncreation = " + creation +
-                "\nmagic = " + magic +
-                "\nteleport = " + teleport;
+                "\ncreation = " + creation;
     }
 }
