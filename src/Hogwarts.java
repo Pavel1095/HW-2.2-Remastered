@@ -26,7 +26,7 @@ public abstract class Hogwarts {
         this.teleport = teleport;
     }
 
-    private String getFullName() {
+    String getFullName() {
         return fullName;
     }
     private void setFullName(String fullName) {

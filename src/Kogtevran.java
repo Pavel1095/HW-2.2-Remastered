@@ -4,46 +4,6 @@ public class Kogtevran extends Hogwarts {
     private int wit;
     private int creation;
 
-    public int getMind() {
-        return mind;
-    }
-    public void setMind(int mind) {
-        this.mind = mind;
-    }
-
-    public int getWisdom() {
-        return wisdom;
-    }
-    public void setWisdom(int wisdom) {
-        this.wisdom = wisdom;
-    }
-
-    public int getWit() {
-        return wit;
-    }
-    public void setWit(int wit) {
-        this.wit = wit;
-    }
-
-    public int getCreation() {
-        return creation;
-    }
-    public void setCreation(int creation) {
-        this.creation = creation;
-    }
-
-    public void compareStudents( Kogtevran studentSecond) {
-        int powerOne = this.mind + this.wisdom + this.wit + this.creation;
-        int powerTwo = studentSecond.mind + studentSecond.wisdom + studentSecond.wit + studentSecond.creation;
-        if (powerOne> powerTwo){
-            System.out.println(this.fullName + " сильнее, чем " + studentSecond.fullName);
-        } else if (powerTwo > powerOne){
-            System.out.println(studentSecond.fullName + " сильнее, чем " + this.fullName);
-        } else {
-            System.out.println(this.fullName + " такой же сильный, как и " + studentSecond.fullName);
-        }
-    }
-
     public Kogtevran(String fullName, int magic, int teleport,int mind, int wisdom, int wit, int creation) {
         super(fullName, magic, teleport);
         if (mind < 0 || mind > 100){
@@ -62,6 +22,46 @@ public class Kogtevran extends Hogwarts {
         this.wisdom = wisdom;
         this.wit = wit;
         this.creation = creation;
+    }
+    public int getMind() {
+        return mind;
+    }
+
+    public void setMind(int mind) {
+        this.mind = mind;
+    }
+    public int getWisdom() {
+        return wisdom;
+    }
+
+    public void setWisdom(int wisdom) {
+        this.wisdom = wisdom;
+    }
+    public int getWit() {
+        return wit;
+    }
+
+    public void setWit(int wit) {
+        this.wit = wit;
+    }
+    public int getCreation() {
+        return creation;
+    }
+
+    public void setCreation(int creation) {
+        this.creation = creation;
+    }
+
+    public void compareStudents( Kogtevran studentSecond) {
+        int powerOne = this.mind + this.wisdom + this.wit + this.creation;
+        int powerTwo = studentSecond.mind + studentSecond.wisdom + studentSecond.wit + studentSecond.creation;
+        if (powerOne> powerTwo){
+            System.out.println(this.getFullName() + " сильнее, чем " + studentSecond.getFullName());
+        } else if (powerTwo > powerOne){
+            System.out.println(studentSecond.getFullName() + " сильнее, чем " + this.getFullName());
+        } else {
+            System.out.println(this.getFullName() + " такой же сильный, как и " + studentSecond.getFullName());
+        }
     }
 
     @Override

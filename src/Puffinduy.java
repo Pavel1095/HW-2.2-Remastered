@@ -24,11 +24,11 @@ public class Puffinduy extends Hogwarts {
         int powerOne = this.industriousness + this.loyalty + this.honesty;
         int powerTwo = studentSecond.industriousness + studentSecond.loyalty + studentSecond.honesty;
         if (powerOne> powerTwo){
-            System.out.println(this.fullName + " сильнее, чем " + studentSecond.fullName);
+            System.out.println(this.getFullName() + " сильнее, чем " + studentSecond.getFullName());
         } else if (powerTwo > powerOne){
-            System.out.println(studentSecond.fullName + " сильнее, чем," + this.fullName);
+            System.out.println(studentSecond.getFullName() + " сильнее, чем," + this.getFullName());
         } else {
-            System.out.println(this.fullName + " такой же сильный, как и " + studentSecond.fullName);
+            System.out.println(this.getFullName() + " такой же сильный, как и " + studentSecond.getFullName());
         }
     }
     @Override
